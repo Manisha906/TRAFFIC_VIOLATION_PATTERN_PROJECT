@@ -14,7 +14,7 @@ print("🚀 Spark Session Started")
 # ================================
 # 📂 2. Load Cleaned Data
 # ================================
-input_path = r"C:\Users\ADMIN\OneDrive\Desktop\Traffic_voilation_detection_pattern\milestone1\Data\cleaned_violations"
+input_path = r"C:\Users\ADMIN\OneDrive\Desktop\Traffic_voilation_detection_pattern\milestone1\Data\Cleaned_violations\csv_output"
 
 df = spark.read.csv(input_path, header=True, inferSchema=True)
 print("✅ Data Loaded Successfully")
@@ -70,7 +70,7 @@ if "Location" in df.columns:
     top_n_locations.show(10)
 
     # ✅ Save Week 4 outputs (CSV + Parquet)
-    week4_total_parquet = r"C:\Users\ADMIN\OneDrive\Desktop\Traffic_voilation_detection_pattern\milestone\Output\week4_total_by_location.parquet"
+    week4_total_parquet = r"C:\Users\ADMIN\OneDrive\Desktop\Traffic_voilation_detection_pattern\milestone2\Output\week4_total_by_location.parquet"
     week4_total_csv = r"C:\Users\ADMIN\OneDrive\Desktop\Traffic_voilation_detection_pattern\milestone2\Output\week4_total_by_location.csv"
 
     week4_top_parquet = r"C:\Users\ADMIN\OneDrive\Desktop\Traffic_voilation_detection_pattern\milestone2\Output\week4_top_locations.parquet"
