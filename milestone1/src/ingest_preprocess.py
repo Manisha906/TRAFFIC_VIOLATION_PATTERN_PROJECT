@@ -30,7 +30,7 @@ schema = StructType([
 # ---------------------------------------------------------
 # ⿣ Read CSV file
 # ---------------------------------------------------------
-file_path = os.path.join("..","Data", "violations.csv")
+file_path = os.path.join("milestone1","Data", "violations.csv")
 if not os.path.exists(file_path):
     raise FileNotFoundError(f"❌ File not found: {file_path}")
 df_raw = spark.read.csv(file_path, header=True, schema=schema)
@@ -53,7 +53,7 @@ print(f"⚠ Invalid rows (bad Fine_Amount): {bad_data.count()}")
 print("\n✅ Sample of cleaned data:")
 good_data.show(5, truncate=False)
 # ⿦ Write cleaned data (CSV + Parquet)
-output_base = os.path.join("..", "Data", "cleaned_violations")
+output_base = os.path.join("milestone1", "Data", "cleaned_violations")
 output_csv_path = os.path.join(output_base, "csv_output")
 output_parquet_path = os.path.join(output_base, "parquet_output")
 
