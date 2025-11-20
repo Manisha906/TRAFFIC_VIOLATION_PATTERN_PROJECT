@@ -19,9 +19,9 @@ def load_data():
         r"milestone3/week5_output/csv_output/vehicle/part-00000-b93cc586-eca2-4c84-a201-dda6201d3a34-c000.csv"
     )
 
-    # Convert pivot → long format (fixing your error)
+    # Convert pivot 
     time_df = time_df.melt(var_name="hour", value_name="count")
-    time_df = time_df[time_df["hour"].str.isnumeric()]  # keep only hours
+    time_df = time_df[time_df["hour"].str.isnumeric()]  
     time_df["hour"] = time_df["hour"].astype(int)
 
     # --- WEEK 6 ---
