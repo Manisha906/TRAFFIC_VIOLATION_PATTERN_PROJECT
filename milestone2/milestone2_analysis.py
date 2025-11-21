@@ -14,7 +14,7 @@ print("🚀 Spark Session Started")
 # ================================
 # 📂 2. Load Cleaned Data
 # ================================
-input_path = r"C:\Users\Admin\OneDrive\Documents\TRAFFIC_VIOLATION_PATTERN_PROJECT\milestone1\Data\cleaned_violations\csv_output"
+input_path = r"C:\TRAFFIC_VIOLATION_PATTERN_PROJECT\milestone1\Data\cleaned_violations\csv_output"
 
 df = spark.read.csv(input_path, header=True, inferSchema=True)
 print("✅ Data Loaded Successfully")
