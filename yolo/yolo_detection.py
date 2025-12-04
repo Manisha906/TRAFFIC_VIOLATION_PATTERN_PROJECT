@@ -24,7 +24,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🚦 YOLOv8 Traffic Violation Dashboard (Black Theme)")
+st.title("🚦 YOLOv8 Traffic Violation Dashboard")
 st.write("Upload video/image → configure → press Run detection. Annotated video will play in-app; CSVs & charts available after run.")
 
 # -------------------------
